@@ -3,7 +3,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Test</title>
+  <title></title>
   <script src="./rough.min.js"></script>
   <style>
     html, body {
@@ -18,7 +18,6 @@
   </style>
 </head>
 <body>
-  <h1>Balloons</h1>
   <script>
     const extend = (base, ...extensions) => Object.assign({}, base, ...extensions)
 
@@ -27,6 +26,9 @@
     const Color = extend.bind(null, { h: 0, s: 100, l: 100, a: 1 })
 
     const Vector = extend.bind(null, { x: 0, y: 0 })
+
+    const fillStyle = ['hachure', 'solid', 'cross-hatch']
+    let fillIndex = 0
 
     const Particle = extend.bind(null, {
       pos: Vector(),
@@ -55,6 +57,7 @@
       const rc = rough.canvas(canvas)
       ctx.clearRect(0, 0, canvas.width, canvas.height)
 
+      fillIndex = 0
       scope.particles.map((p, i) => {
         p.pos.y -= p.speed
         if (i % 2) {
@@ -67,7 +70,8 @@
           fill: parseColor(p.color),
           roughness: Math.random() * 1.5,
           hachureGap: p.hachureGap,
-          hachureAngle: p.hachureAngle
+          hachureAngle: p.hachureAngle,
+          fillStyle: fillStyle[fillIndex++%fillStyle.length]
         })
         rc.line(p.pos.x, p.pos.y + p.radius * 1.2, p.pos.x, p.pos.y + p.radius / 2, {
           bowing: Math.random() * 3
@@ -110,7 +114,6 @@
 
       animationLoop(scope)
     })(scope)
-  </script><canvas width="1920" height="938"></canvas><canvas width="1920" height="987"></canvas>
-
-
-</body></html>
+  </script>
+</body>
+</html>
