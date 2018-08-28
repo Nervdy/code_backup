@@ -2,7 +2,8 @@
 
 - 响应式 （Reactivity）
   
-  - [x] [The Best Explanation of JavaScript Reactivity – Vue Mastery – Medium](https://medium.com/vue-mastery/the-best-explanation-of-javascript-reactivity-fea6112dd80d)
+  - [x] [The Best Explanation of JavaScript Reactivity – Vue Mastery – Medium](https://medium.com/vue-mastery/the-best-explanation-of-javascript-reactivity-fea6112dd80d)  
+    > [Reactivity](./Reactivity.js)
 
 - 面试
   
