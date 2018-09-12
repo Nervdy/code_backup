@@ -10,7 +10,8 @@
 - JavaScript
 
   - [ ] [【朴灵评注】JavaScript 运行机制详解：再谈Event Loop](https://blog.csdn.net/lin_credible/article/details/40143961)
-  - [ ] [Understanding Execution Context and Execution Stack in Javascript](https://blog.bitsrc.io/understanding-execution-context-and-execution-stack-in-javascript-1c9ea8642dd0)
+  - [ ] [Understanding Execution Context and Execution Stack in Javascript](https://blog.bitsrc.io/understanding-execution-context-and-execution-stack-in-javascript-1c9ea8642dd0)  
+  - [ ] [AST抽象语法树](https://segmentfault.com/a/1190000016231512)
 
 
 - 响应式 （Reactivity）
