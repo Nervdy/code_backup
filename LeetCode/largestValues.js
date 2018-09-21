@@ -1,27 +1,15 @@
-let a = [3,9,20,null,null,15,7]
-
-let root = {
-  val: 3,
-  left: {
-    val: 9,
-    left: null,
-    right: null
-  },
-  right: {
-    val: 20,
-    left: {
-      val: 15,
-      left: null,
-      right: null
-    },
-    right: {
-      val: 7,
-      left: null,
-      right: null
-    }
-  }
-}
-
+/**
+ * link: https://leetcode.com/problems/find-largest-value-in-each-tree-row/description/
+ * Definition for a binary tree node.
+ * function TreeNode(val) {
+ *     this.val = val;
+ *     this.left = this.right = null;
+ * }
+ */
+/**
+ * @param {TreeNode} root
+ * @return {number[]}
+ */
 var largestValues = function(root) {
   let result = []
   let queue = []
@@ -51,6 +39,30 @@ var largestValues = function(root) {
     result.push(max)
   }
   return result   
+}
+
+let a = [3,9,20,null,null,15,7]
+
+let root = {
+  val: 3,
+  left: {
+    val: 9,
+    left: null,
+    right: null
+  },
+  right: {
+    val: 20,
+    left: {
+      val: 15,
+      left: null,
+      right: null
+    },
+    right: {
+      val: 7,
+      left: null,
+      right: null
+    }
+  }
 }
 
 console.log(largestValues(root))

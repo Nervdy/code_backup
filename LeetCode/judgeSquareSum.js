@@ -1,5 +1,5 @@
 /**
- * see: https://leetcode.com/problems/sum-of-square-numbers/description/
+ * link: https://leetcode.com/problems/sum-of-square-numbers/description/
  * @param {number} c
  * @return {boolean}
  */

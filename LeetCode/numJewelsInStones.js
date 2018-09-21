@@ -1,5 +1,5 @@
 /**
- * see: https://leetcode.com/problems/jewels-and-stones/description/
+ * link: https://leetcode.com/problems/jewels-and-stones/description/
  * @param {string} J
  * @param {string} S
  * @return {number}

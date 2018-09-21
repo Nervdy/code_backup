@@ -1,27 +1,15 @@
-let a = [3,9,20,null,null,15,7]
-
-let root = {
-  val: 3,
-  left: {
-    val: 9,
-    left: null,
-    right: null
-  },
-  right: {
-    val: 20,
-    left: {
-      val: 15,
-      left: null,
-      right: null
-    },
-    right: {
-      val: 7,
-      left: null,
-      right: null
-    }
-  }
-}
-
+/**
+ * link: https://leetcode.com/problems/binary-tree-level-order-traversal/description/
+ * Definition for a binary tree node.
+ * function TreeNode(val) {
+ *     this.val = val;
+ *     this.left = this.right = null;
+ * }
+ */
+/**
+ * @param {TreeNode} root
+ * @return {number[][]}
+ */
 // 56 ~ 60ms
 function order (root) {
   let result = []
@@ -86,4 +74,28 @@ function order (root) {
     result.push(arr)
   }
   return result
+}
+
+let a = [3,9,20,null,null,15,7]
+
+let root = {
+  val: 3,
+  left: {
+    val: 9,
+    left: null,
+    right: null
+  },
+  right: {
+    val: 20,
+    left: {
+      val: 15,
+      left: null,
+      right: null
+    },
+    right: {
+      val: 7,
+      left: null,
+      right: null
+    }
+  }
 }

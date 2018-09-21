@@ -1,5 +1,5 @@
 /**
- * see: https://leetcode.com/problems/my-calendar-iii/description/
+ * link: https://leetcode.com/problems/my-calendar-iii/description/
  */
 var MyCalendarThree = function() {
   this.registry_books = []

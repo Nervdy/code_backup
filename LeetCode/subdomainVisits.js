@@ -1,4 +1,8 @@
-var enter = ["900 google.mail.com", "50 yahoo.com", "1 intel.mail.com", "5 wiki.org"]
+/**
+ * link: https://leetcode.com/problems/subdomain-visit-count/description/
+ * @param {string[]} cpdomains
+ * @return {string[]}
+ */
 function subdomainVisits(cpdomains) {
   let result = [], top = {}, one = {}, two = {}
   let cache_arr = cpdomains.map(i => {
@@ -26,4 +30,6 @@ function subdomainVisits(cpdomains) {
   })
   return result
 }
+
+var enter = ["900 google.mail.com", "50 yahoo.com", "1 intel.mail.com", "5 wiki.org"]
 console.log('subdomainVisits:', subdomainVisits(enter))
