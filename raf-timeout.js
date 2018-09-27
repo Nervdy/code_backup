@@ -45,7 +45,7 @@ const {timeout, cleartimeout, interval, clearinterval} = (function () {
 
   function timeout (callback, delay = 0, ...params) {
     if (!Number.isInteger(delay)) {
-      throw TypeError('the delay must be a integer number')
+      throw TypeError('The parameter delay must be a positive integer')
     }
   
     if (typeof callback === 'function') {
