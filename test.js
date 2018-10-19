@@ -104,21 +104,21 @@
 
 
 
-var examplearr = [8, 94, 15, 88, 55, 76, 21, 39, 1];
-function sortarr(arr) {
-  for (i = 0; i < arr.length - 1; i++) {
-    for (j = 0; j < arr.length - 1 - i; j++) {
+// var examplearr = [8, 94, 15, 88, 55, 76, 21, 39, 1];
+// function sortarr(arr) {
+//   for (i = 0; i < arr.length - 1; i++) {
+//     for (j = 0; j < arr.length - 1 - i; j++) {
 
-      if (arr[j] > arr[j + 1]) {
-        [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]]
-      }
+//       if (arr[j] > arr[j + 1]) {
+//         [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]]
+//       }
 
-    }
-  }
-  return arr;
-}
-sortarr(examplearr);
-console.log(examplearr);
+//     }
+//   }
+//   return arr;
+// }
+// sortarr(examplearr);
+// console.log(examplearr);
 
 
 // var examplearr = [8, 94, 15, 88, 55, 76, 21, 39, 1];
@@ -134,3 +134,32 @@ console.log(examplearr);
 //   return arr
 // }
 // console.log(sort(examplearr))
+
+
+// let arr = [1,2,3,4,5,6,7,8,9]
+
+// let [arr1, arr2, arr3, arr4] = arr.reduce((p, v, i) => {
+//   i = i % 4
+//   p[i] ? p[i].push(v) : p[i] = [v]
+//   return p
+// }, [])
+
+// console.log(arr1, arr2, arr3, arr4)
+
+
+async function doubleAndAdd (a, b) {
+  // a = await doubleAfter1Sec(a)
+  // b = await doubleAfter1Sec(b)
+  [a, b] = await Promise.all([doubleAfter1Sec(a), doubleAfter1Sec(b)])
+  return a + b
+}
+
+doubleAndAdd(1, 2).then(console.log)
+
+function doubleAfter1Sec (param) {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      resolve(param * 2)
+    }, 1000)
+  })
+}
