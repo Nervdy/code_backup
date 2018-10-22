@@ -16,6 +16,7 @@
   - [ ] [JS节流、防抖及使用场景 - juejin](https://juejin.im/post/5b8de829f265da43623c4261)
   - [ ] [js:防抖动与节流 - csdn](https://blog.csdn.net/crystal6918/article/details/62236730)
   - [ ] [原生JS写全屏滚动插件教程](http://www.codeasily.net/course/plugin_course/)
+  - [ ] [Here are examples of everything new in ECMAScript 2016, 2017, and 2018](https://medium.freecodecamp.org/here-are-examples-of-everything-new-in-ecmascript-2016-2017-and-2018-d52fa3b5a70e)
 
 
 ## 响应式 （Reactivity）
@@ -27,10 +28,12 @@
   
   [InterviewMap](https://yuchengkai.cn/docs/zh/)  
   - [ ] [面试官: 你了解前端路由吗?](https://juejin.im/post/5ac61da66fb9a028c71eae1b)
+  - [ ] [2018年，最常见的26个JavaScript面试题和答案](https://mp.weixin.qq.com/s?__biz=MzUxMzcxMzE5Ng==&mid=2247489661&idx=1&sn=6eb5c1b4fe8b853996a051ae47fe23a8&chksm=f951ad3ece26242810ec7030087c23f0b3faca40acb952475f9c1088da2738860b63166935bf&token=1699854096&lang=zh_CN#rd)
 
 ## 优化
 
   - [ ] [网站性能优化实战——从12.67s到1.06s的故事](https://juejin.im/post/5b0b7d74518825158e173a0c?utm_source=gold_browser_extension)
+  - [x] [浏览器页面渲染机制，你真的弄懂了吗？](https://mp.weixin.qq.com/s?__biz=MzUxMzcxMzE5Ng==&mid=2247489674&idx=1&sn=7a73f9398be8024bebb6467e730c4d3b&chksm=f951adc9ce2624df6b09ed1da77751420ddd72eb2c0e95f456a8f2a834207704cfd05797da14&token=1699854096&lang=zh_CN#rd)
 
 ## cpp
 
