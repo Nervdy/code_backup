@@ -2,10 +2,10 @@
 
 ## 综合
 
-  [前端开发者指南 2018](https://leviding.gitbooks.io/front-end-handbook-2018/content/)  
-  [掘金翻译计划](https://github.com/xitu/gold-miner)  
-  [The best front-end hacking cheatsheets — all in one place.](https://medium.freecodecamp.org/modern-frontend-hacking-cheatsheets-df9c2566c72a)  
-  [caniuse Feature index](https://caniuse.com/#index)
+  - [前端开发者指南 2018](https://leviding.gitbooks.io/front-end-handbook-2018/content/)  
+  - [掘金翻译计划](https://github.com/xitu/gold-miner)  
+  - [The best front-end hacking cheatsheets — all in one place.](https://medium.freecodecamp.org/modern-frontend-hacking-cheatsheets-df9c2566c72a)  
+  - [caniuse Feature index](https://caniuse.com/#index)
   - [ ] [goodbye-object-oriented-programming](https://medium.com/@cscalfani/goodbye-object-oriented-programming-a59cda4c0e53)
 
 ## JavaScript
@@ -23,11 +23,11 @@
 ## 响应式 （Reactivity）
   
   - [x] [The Best Explanation of JavaScript Reactivity – Vue Mastery – Medium](https://medium.com/vue-mastery/the-best-explanation-of-javascript-reactivity-fea6112dd80d)  
-  [Reactivity.js](./Reactivity.js)
+  - [Reactivity.js](./Reactivity.js)
 
 ## 面试
   
-  [InterviewMap](https://yuchengkai.cn/docs/zh/)  
+  - [InterviewMap](https://yuchengkai.cn/docs/zh/)  
   - [ ] [面试官: 你了解前端路由吗?](https://juejin.im/post/5ac61da66fb9a028c71eae1b)
   - [ ] [2018年，最常见的26个JavaScript面试题和答案](https://mp.weixin.qq.com/s?__biz=MzUxMzcxMzE5Ng==&mid=2247489661&idx=1&sn=6eb5c1b4fe8b853996a051ae47fe23a8&chksm=f951ad3ece26242810ec7030087c23f0b3faca40acb952475f9c1088da2738860b63166935bf&token=1699854096&lang=zh_CN#rd)
 
@@ -38,7 +38,7 @@
 
 ## cpp
 
-  [JSCPP online](https://felixhao28.github.io/JSCPP/)
+  - [JSCPP online](https://felixhao28.github.io/JSCPP/)
 
 ## css
 
@@ -47,3 +47,8 @@
 ## webpack
 
   - [ ] [Webpack HMR 原理解析](https://zhuanlan.zhihu.com/p/30669007)
+
+## Vue
+
+  - [Vue技术内幕](http://hcysun.me/vue-design/)
+  - [Vue.js 技术揭秘](https://ustbhuangyi.github.io/vue-analysis/)
