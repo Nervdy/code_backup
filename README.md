@@ -52,3 +52,7 @@
 
   - [Vue技术内幕](http://hcysun.me/vue-design/)
   - [Vue.js 技术揭秘](https://ustbhuangyi.github.io/vue-analysis/)
+
+## React
+
+  - [面向初学者的高阶组件教程](https://www.w3cplus.com/react/higher-order-components-for-beginners.html)
