@@ -1,3 +1,4 @@
+// link：https://www.v2ex.com/t/509253#reply21
 // 挑战目标：获取 key 的值
 (function () {
   // 一个内部变量，外部无法获取
