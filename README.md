@@ -7,6 +7,7 @@
   - [The best front-end hacking cheatsheets — all in one place.](https://medium.freecodecamp.org/modern-frontend-hacking-cheatsheets-df9c2566c72a)  
   - [caniuse Feature index](https://caniuse.com/#index)
   - [ ] [goodbye-object-oriented-programming](https://medium.com/@cscalfani/goodbye-object-oriented-programming-a59cda4c0e53)
+  - [ ] [Chrome开发者工具之JavaScript内存分析](http://www.codeceo.com/article/chrome-javascript-memory.html)
 
 ## JavaScript
 
