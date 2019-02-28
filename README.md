@@ -58,6 +58,7 @@
 ## React
 
   - [x] [面向初学者的高阶组件教程](https://www.w3cplus.com/react/higher-order-components-for-beginners.html)
+  - [ ] [完全理解React Fiber](http://www.ayqy.net/blog/dive-into-react-fiber/)
 
 
 <details>
