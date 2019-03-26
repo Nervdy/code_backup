@@ -33,6 +33,7 @@
   - [ ] [2018年，最常见的26个JavaScript面试题和答案](https://mp.weixin.qq.com/s?__biz=MzUxMzcxMzE5Ng==&mid=2247489661&idx=1&sn=6eb5c1b4fe8b853996a051ae47fe23a8&chksm=f951ad3ece26242810ec7030087c23f0b3faca40acb952475f9c1088da2738860b63166935bf&token=1699854096&lang=zh_CN#rd)
   - [ ] [写在19年初的后端社招面试经历(两年经验): 蚂蚁 头条 PingCAP](https://aylei.github.io/blog/interview-experience/)
   - [ ] [【译】面试 30 秒](https://juejin.im/post/5c9243f96fb9a070ce31ab46)
+  - [ ] [前端面试之道](https://juejin.im/book/5bdc715fe51d454e755f75ef?tdsourcetag=s_pcqq_aiomsg)
   
   - webpack各个loader都干啥的，具体啥流程
   - promise

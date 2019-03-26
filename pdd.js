@@ -19,23 +19,24 @@ function fullArrange(input) {
 
 
 console.log(fullArrange('abc'))
+console.log(fullArrange('abcdefg').length)
 
 
-function fullArrange(str) {
-  let result = []; const arr = str.split(''); 
-  for (let i = 0; i < arr.length; i++) {
-    const element = arr[i];
-    const rest = [...arr];
-    rest.splice(i, 1);
-    if (rest.length === 0) { 
-      result.push(element);
-    } else {
-      const restResult = fullArrange(rest.join('')); 
-      restResult.forEach(s => {
-        result.push(element + s);
-      });
-    }
-  } 
-  return result;
+// function fullArrange(str) {
+//   let result = []; const arr = str.split(''); 
+//   for (let i = 0; i < arr.length; i++) {
+//     const element = arr[i];
+//     const rest = [...arr];
+//     rest.splice(i, 1);
+//     if (rest.length === 0) { 
+//       result.push(element);
+//     } else {
+//       const restResult = fullArrange(rest.join('')); 
+//       restResult.forEach(s => {
+//         result.push(element + s);
+//       });
+//     }
+//   } 
+//   return result;
 
-}
+// }
