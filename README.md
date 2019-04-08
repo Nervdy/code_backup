@@ -34,6 +34,7 @@
   - [ ] [写在19年初的后端社招面试经历(两年经验): 蚂蚁 头条 PingCAP](https://aylei.github.io/blog/interview-experience/)
   - [ ] [【译】面试 30 秒](https://juejin.im/post/5c9243f96fb9a070ce31ab46)
   - [ ] [(中篇)中高级前端大厂面试秘籍，寒冬中为您保驾护航，直通大厂](https://juejin.im/post/5c92f499f265da612647b754)
+  - [ ] [前端面试之道](https://juejin.im/book/5bdc715fe51d454e755f75ef?tdsourcetag=s_pcqq_aiomsg)
   
   - webpack各个loader都干啥的，具体啥流程
   - promise
