@@ -33,6 +33,7 @@
   - [ ] [2018年，最常见的26个JavaScript面试题和答案](https://mp.weixin.qq.com/s?__biz=MzUxMzcxMzE5Ng==&mid=2247489661&idx=1&sn=6eb5c1b4fe8b853996a051ae47fe23a8&chksm=f951ad3ece26242810ec7030087c23f0b3faca40acb952475f9c1088da2738860b63166935bf&token=1699854096&lang=zh_CN#rd)
   - [ ] [写在19年初的后端社招面试经历(两年经验): 蚂蚁 头条 PingCAP](https://aylei.github.io/blog/interview-experience/)
   - [ ] [【译】面试 30 秒](https://juejin.im/post/5c9243f96fb9a070ce31ab46)
+  - [ ] [(中篇)中高级前端大厂面试秘籍，寒冬中为您保驾护航，直通大厂](https://juejin.im/post/5c92f499f265da612647b754)
   
   - webpack各个loader都干啥的，具体啥流程
   - promise
@@ -41,6 +42,7 @@
   - 常用的es6方法
   - 浏览器打开一个窗口会分配多少内存给他
   - node一个线程最多多少内存
+  - 看没看过redux源码,Rn用过的话，做过什么优化
 
 ## 优化
 
