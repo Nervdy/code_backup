@@ -173,7 +173,7 @@ a == 0  // true
 //  因为 a 是对象，所以会通过 valueOf 转换为原始类型再比较值
 ```
 
-## this
+# this
 
 ```js
 function foo() {
@@ -191,7 +191,7 @@ obj.foo()  // 2
 const c = new foo()  // undefined
 ```
 
-### 箭头函数
+## 箭头函数
 
 - 函数体内的this对象，就是定义时所在的对象，而不是使用时所在的对象。
 

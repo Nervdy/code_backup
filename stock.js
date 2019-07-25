@@ -18,13 +18,35 @@ const stockList = [
   'sh600016'
 ]
 
+const stockName = {
+  '601398': '工商银行',
+  '601939': '建设银行',
+  '601288': '农业银行',
+  '601988': '中国银行',
+  '600036': '招商银行',
+  '601328': '交通银行',
+  '601166': '兴业银行',
+  '600000': '浦发银行',
+  '601998': '中信银行',
+  '600016': '民生银行'
+}
+
 const http = require('http')
+const querystring = require('querystring')
 
 getApiContent(url + stockList.join(','))
 .then(res => {
   // let stockArr = parseContent(res).sort((a,b) => a.pbratio - b.pbratio)
   let stockArr = parseContent(res).sort((a,b) => a.marketcap - b.marketcap)
   console.log(JSON.stringify(stockArr).replace(/},/g, '\n'))
+
+  let sendTextArr = []
+  for (let item of stockArr) {
+    if (item.pbratio < 0.7) {
+      sendTextArr.push(`### ${stockName[item.code]} -- ${item.code}  \n    价格:${item.price}\n    总市值:${item.marketcap}\n    市净率:${item.pbratio}  \n`)
+    }
+  }
+  sendServerChan(sendTextArr.join('  '))
 })
 
 function getApiContent (getUrl) {
@@ -37,7 +59,7 @@ function getApiContent (getUrl) {
         if (res.statusCode === 200) {
           resolve(resData)
         } else {
-          reject('fail: ', res.statusCode)
+          reject('fail: ' + res.statusCode)
         }
       })
     })
@@ -53,7 +75,7 @@ function parseContent (content) {
     let itemArr = item.split('~')
     parseResult.push({
       // 中文乱码
-      // name: itemArr[1],
+      name: stockName[itemArr[2]],
       code: itemArr[2],
       price: itemArr[3],
       marketcap: itemArr[45],  // 总市值
@@ -61,4 +83,36 @@ function parseContent (content) {
     })
   }
   return parseResult
+}
+
+function sendServerChan (text) {
+  let serverChanUrl = 'http://sc.ftqq.com/???.send'
+
+  let sendData = {
+    text: '银行股波动',
+    desp: text
+  }
+
+  let req = http.request(serverChanUrl, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
+    }
+  }, (res) => {
+    console.log(`状态码: ${res.statusCode}`);
+    console.log(`响应头: ${JSON.stringify(res.headers)}`);
+    res.setEncoding('utf8');
+    res.on('data', (chunk) => {
+      console.log(`响应主体: ${chunk}`);
+    });
+    res.on('end', () => {
+      console.log('响应中已无数据');
+    });
+    if (res.statusCode === 200) {
+      console.log('发送成功')
+    }
+  })
+
+  req.write(querystring.stringify(sendData))
+  req.end()
 }

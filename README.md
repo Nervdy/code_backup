@@ -19,7 +19,8 @@
   - [ ] [原生JS写全屏滚动插件教程](http://www.codeasily.net/course/plugin_course/)
   - [ ] [Here are examples of everything new in ECMAScript 2016, 2017, and 2018](https://medium.freecodecamp.org/here-are-examples-of-everything-new-in-ecmascript-2016-2017-and-2018-d52fa3b5a70e)
   - [ ] [JavaScript 词法、静态、动态作用域初级理解](http://www.cnblogs.com/zero-zf/p/5875089.html)
-
+  - [ ] [JavaScript "loose" comparison step by step](https://felix-kling.de/js-loose-comparison/)
+  - [ ] [ECMAScript® Language Specification](https://www.ecma-international.org/ecma-262/5.1/)
 
 ## 响应式 （Reactivity）
   
