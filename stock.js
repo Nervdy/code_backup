@@ -1,3 +1,8 @@
+// 新浪股票数据接口
+// const url = 'http://hq.sinajs.cn/list='
+
+// 腾讯股票数据接口
+// https://blog.csdn.net/USTBHacker/article/details/8365756
 const url = 'http://qt.gtimg.cn/q='
 
 const stockList = [
