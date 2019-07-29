@@ -36,8 +36,8 @@ const querystring = require('querystring')
 
 getApiContent(url + stockList.join(','))
 .then(res => {
-  // let stockArr = parseContent(res).sort((a,b) => a.pbratio - b.pbratio)
-  let stockArr = parseContent(res).sort((a,b) => a.marketcap - b.marketcap)
+  let stockArr = parseContent(res).sort((a,b) => a.pbratio - b.pbratio)
+  // let stockArr = parseContent(res).sort((a,b) => a.marketcap - b.marketcap)
   console.log(JSON.stringify(stockArr).replace(/},/g, '\n'))
 
   let sendTextArr = []
@@ -46,7 +46,9 @@ getApiContent(url + stockList.join(','))
       sendTextArr.push(`### ${stockName[item.code]} -- ${item.code}  \n    价格:${item.price}\n    总市值:${item.marketcap}\n    市净率:${item.pbratio}  \n`)
     }
   }
-  sendServerChan(sendTextArr.join('  '))
+  if (sendServerChan.length > 0) {
+    sendServerChan(sendTextArr.join('  '))
+  }
 })
 
 function getApiContent (getUrl) {
@@ -86,10 +88,12 @@ function parseContent (content) {
 }
 
 function sendServerChan (text) {
-  let serverChanUrl = 'http://sc.ftqq.com/???.send'
+  const config = require('./ServerChanConfig')
+  
+  let serverChanUrl = `http://sc.ftqq.com/${config.SCKEY}.send`
 
   let sendData = {
-    text: '银行股波动',
+    text: '波动',
     desp: text
   }
 
@@ -111,6 +115,10 @@ function sendServerChan (text) {
     if (res.statusCode === 200) {
       console.log('发送成功')
     }
+  })
+
+  req.on('error', (e) => {
+    console.error('error ==> ', e.message)
   })
 
   req.write(querystring.stringify(sendData))
