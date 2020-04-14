@@ -34,23 +34,6 @@ const stockName = {
 const http = require('http')
 const querystring = require('querystring')
 
-getApiContent(url + stockList.join(','))
-.then(res => {
-  let stockArr = parseContent(res).sort((a,b) => a.pbratio - b.pbratio)
-  // let stockArr = parseContent(res).sort((a,b) => a.marketcap - b.marketcap)
-  console.log(JSON.stringify(stockArr).replace(/},/g, '\n'))
-
-  let sendTextArr = []
-  for (let item of stockArr) {
-    if (item.pbratio < 0.7) {
-      sendTextArr.push(`### ${stockName[item.code]} -- ${item.code}  \n    价格:${item.price}\n    总市值:${item.marketcap}\n    市净率:${item.pbratio}  \n`)
-    }
-  }
-  if (sendServerChan.length > 0) {
-    sendServerChan(sendTextArr.join('  '))
-  }
-})
-
 function getApiContent (getUrl) {
   return new Promise((resolve, reject) => {
     http.get(getUrl, res => {
@@ -103,15 +86,7 @@ function sendServerChan (text) {
       'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
     }
   }, (res) => {
-    console.log(`状态码: ${res.statusCode}`);
-    console.log(`响应头: ${JSON.stringify(res.headers)}`);
     res.setEncoding('utf8');
-    res.on('data', (chunk) => {
-      console.log(`响应主体: ${chunk}`);
-    });
-    res.on('end', () => {
-      console.log('响应中已无数据');
-    });
     if (res.statusCode === 200) {
       console.log('发送成功')
     }
@@ -124,3 +99,28 @@ function sendServerChan (text) {
   req.write(querystring.stringify(sendData))
   req.end()
 }
+
+function activate (log = false) {
+  getApiContent(url + stockList.join(','))
+  .then(res => {
+    let stockArr = parseContent(res).sort((a,b) => a.pbratio - b.pbratio)
+    // let stockArr = parseContent(res).sort((a,b) => a.marketcap - b.marketcap)
+    if (log) {
+      console.log(JSON.stringify(stockArr).replace(/},/g, '\n'))
+    }
+
+    let sendTextArr = []
+    for (let item of stockArr) {
+      if (item.pbratio < 0.6) {
+        sendTextArr.push(`### ${stockName[item.code]} -- ${item.code}  \n    价格:${item.price}\n    总市值:${item.marketcap}\n    市净率:${item.pbratio}  \n`)
+      }
+    }
+    if (sendTextArr.length > 0) {
+      // sendServerChan(sendTextArr.join('  '))
+    }
+  })
+}
+
+activate(true)
+
+exports.activate = activate
